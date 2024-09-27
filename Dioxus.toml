@@ -16,7 +16,7 @@ asset_dir = "assets"
 
 [web.app]
 
-base_path = "prof_spoon"
+base_path = "prof-spoon"
 
 # HTML title tag content
 title = "prof-spoon"
