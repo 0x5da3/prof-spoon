@@ -13,10 +13,19 @@ fn main() {
     launch(App);
 }
 
-pub const ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG").preload());
-pub const ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG").preload());
-pub const ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG").preload());
-pub const ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG").preload());
+// pub const ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG").preload());
+// pub const ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG").preload());
+// pub const ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG").preload());
+// pub const ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG").preload());
+
+pub const ASSET1: &str =
+    "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/1PNG5cfdcad44d303f1e.avif";
+pub const ASSET2: &str =
+    "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/2PNGa46786e431bc964c.avif";
+pub const ASSET3: &str =
+    "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/3PNGe9db826187321857.avif";
+pub const ASSET4: &str =
+    "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/4PNGb07e403040713d48.avif";
 
 #[component]
 fn App() -> Element {
@@ -25,10 +34,16 @@ fn App() -> Element {
 
     let v = vec![ASSET1, ASSET2, ASSET3, ASSET4];
     let mut opacity_val = use_signal(|| 0);
-    let mut selected = use_signal(|| manganis::mg!(image("./public/static/1.PNG")));
+    let mut selected = use_signal(|| {
+        "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/1PNG5cfdcad44d303f1e.avif"
+    });
 
     //a { href: "https://web.iriam.app/s/user/YVR6XsPvqN?uuid=47b0488e", "イリアム" }
     rsx! {
+        link {
+            rel: "stylesheet",
+            href: "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/tailwindcss7115efdd5e257c6f.css"
+        }
         div { class: "bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex justify-center",
             div { class: "w-full max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6 space-y-6",
                 h1 { class: "text-3xl text-center bg-gradient-to-r from-gray-900 via-gray-700 to-black py-6 rounded-lg text-gray-200 font-serif tracking-wide",
