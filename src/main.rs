@@ -4,7 +4,7 @@ use dioxus::prelude::*;
 use dioxus_logger::tracing::{info, Level};
 
 // Urls are relative to your Cargo.toml file
-const _TAILWIND_URL: &str = manganis::mg!(file("public/tailwind.css"));
+pub const _TAILWIND_URL: &str = manganis::mg!(file("public/tailwind.css"));
 
 fn main() {
     // Init logger
@@ -13,10 +13,10 @@ fn main() {
     launch(App);
 }
 
-const ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG"));
-const ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG"));
-const ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG"));
-const ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG"));
+pub const ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG"));
+pub const ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG"));
+pub const ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG"));
+pub const ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG"));
 
 #[component]
 fn App() -> Element {
