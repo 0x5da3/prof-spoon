@@ -13,15 +13,15 @@ fn main() {
     launch(App);
 }
 
+const ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG"));
+const ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG"));
+const ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG"));
+const ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG"));
+
 #[component]
 fn App() -> Element {
     // Build cool things ✌️
-    let _reload = 4;
-
-    const ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG"));
-    const ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG"));
-    const ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG"));
-    const ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG"));
+    let _reload = 5;
 
     let v = vec![ASSET1, ASSET2, ASSET3, ASSET4];
     let mut opacity_val = use_signal(|| 0);
@@ -42,7 +42,7 @@ fn App() -> Element {
                         }
                     }
                 }
-                script { src: "https://platform.twitter.com/widgets.js" }
+                script { src: "https://platform.twitter.com/widgets.js", r#async:true }
                 br {}
                 div { class: "flex space-x-4",
                     for asset in v {
@@ -66,3 +66,8 @@ fn App() -> Element {
         }
     }
 }
+
+//<blockquote class="twitter-tweet">
+//<p lang="en" dir="ltr">At dawn from the gateway to Mars, the launch of Starship’s second flight test
+//<a href="https://t.co/ffKnsVKwG4">pic.twitter.com/ffKnsVKwG4</a></p>&mdash; SpaceX (@SpaceX)
+//<a href="https://twitter.com/SpaceX/status/1732824684683784516?ref_src=twsrc%5Etfw">December 7, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
