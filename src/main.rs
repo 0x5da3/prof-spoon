@@ -53,7 +53,7 @@ fn App() -> Element {
                     picture {
                         source {
                             r#type: "image/avif",
-                            dangerous_inner_html: "srcset={selected}"
+                            dangerous_inner_html: "srcset=\"{selected}\""
                         }
                         img {
                             class: "transition-opacity duration-500 ease-in-out opacity-{opacity_val}",
@@ -74,7 +74,7 @@ fn App() -> Element {
                         picture {
                             source {
                                 r#type: "image/avif",
-                                dangerous_inner_html: "srcset={asset}"
+                                dangerous_inner_html: "srcset=\"{asset}\""
                             }
                             img {
                                 src: "{asset}",
