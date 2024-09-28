@@ -13,10 +13,10 @@ fn main() {
     launch(App);
 }
 
-pub const ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG"));
-pub const ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG"));
-pub const ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG"));
-pub const ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG"));
+pub const ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG").preload());
+pub const ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG").preload());
+pub const ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG").preload());
+pub const ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG").preload());
 
 #[component]
 fn App() -> Element {
@@ -26,6 +26,7 @@ fn App() -> Element {
     let v = vec![ASSET1, ASSET2, ASSET3, ASSET4];
     let mut opacity_val = use_signal(|| 0);
     let mut selected = use_signal(|| manganis::mg!(image("./public/static/1.PNG")));
+
     //a { href: "https://web.iriam.app/s/user/YVR6XsPvqN?uuid=47b0488e", "イリアム" }
     rsx! {
         div { class: "bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex justify-center",
@@ -42,7 +43,10 @@ fn App() -> Element {
                         }
                     }
                 }
-                script { src: "https://platform.twitter.com/widgets.js", r#async:true }
+                script {
+                    src: "https://platform.twitter.com/widgets.js",
+                    r#async: true
+                }
                 br {}
                 div { class: "flex space-x-4",
                     for asset in v {
@@ -66,8 +70,3 @@ fn App() -> Element {
         }
     }
 }
-
-//<blockquote class="twitter-tweet">
-//<p lang="en" dir="ltr">At dawn from the gateway to Mars, the launch of Starship’s second flight test
-//<a href="https://t.co/ffKnsVKwG4">pic.twitter.com/ffKnsVKwG4</a></p>&mdash; SpaceX (@SpaceX)
-//<a href="https://twitter.com/SpaceX/status/1732824684683784516?ref_src=twsrc%5Etfw">December 7, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
