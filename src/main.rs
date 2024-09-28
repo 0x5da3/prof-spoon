@@ -50,11 +50,14 @@ fn App() -> Element {
                     "鉄乃 匙"
                 }
                 div { class: "max-w-screen-sm bg-white",
-                    img {
-                        class: "transition-opacity duration-500 ease-in-out opacity-{opacity_val}",
-                        src: "{selected}",
-                        onload: move |_| {
-                            *opacity_val.write() = 100;
+                    picture {
+                        source { r#type: "image/avif" }
+                        img {
+                            class: "transition-opacity duration-500 ease-in-out opacity-{opacity_val}",
+                            src: "{selected}",
+                            onload: move |_| {
+                                *opacity_val.write() = 100;
+                            }
                         }
                     }
                 }
@@ -65,11 +68,14 @@ fn App() -> Element {
                 br {}
                 div { class: "flex space-x-4",
                     for asset in v {
-                        img {
-                            src: "{asset}",
-                            class: "w-32 h-32 border-2 border-blue-200 rounded-full object-cover",
-                            onclick: move |_| {
-                                *selected.write() = asset.clone();
+                        picture {
+                            source { r#type: "image/avif" }
+                            img {
+                                src: "{asset}",
+                                class: "w-32 h-32 border-2 border-blue-200 rounded-full object-cover",
+                                onclick: move |_| {
+                                    *selected.write() = asset.clone();
+                                }
                             }
                         }
                     }
