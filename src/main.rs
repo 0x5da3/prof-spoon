@@ -51,7 +51,10 @@ fn App() -> Element {
                 }
                 div { class: "max-w-screen-sm bg-white",
                     picture {
-                        source { r#type: "image/avif" }
+                        source {
+                            r#type: "image/avif",
+                            dangerous_inner_html: "srcset={selected}"
+                        }
                         img {
                             class: "transition-opacity duration-500 ease-in-out opacity-{opacity_val}",
                             src: "{selected}",
@@ -69,7 +72,10 @@ fn App() -> Element {
                 div { class: "flex space-x-4",
                     for asset in v {
                         picture {
-                            source { r#type: "image/avif" }
+                            source {
+                                r#type: "image/avif",
+                                dangerous_inner_html: "srcset={asset}"
+                            }
                             img {
                                 src: "{asset}",
                                 class: "w-32 h-32 border-2 border-blue-200 rounded-full object-cover",
