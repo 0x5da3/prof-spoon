@@ -63,17 +63,11 @@ fn App() -> Element {
                     "鉄乃 匙"
                 }
                 div { class: "max-w-screen-sm bg-white",
-                    picture {
-                        source {
-                            r#type: "image/avif",
-                            dangerous_inner_html: "srcset=\"{selected}\""
-                        }
-                        img {
-                            class: "transition-opacity duration-500 ease-in-out opacity-{opacity_val}",
-                            src: "{selected}",
-                            onload: move |_| {
-                                *opacity_val.write() = 100;
-                            }
+                    img {
+                        class: "transition-opacity duration-500 ease-in-out opacity-{opacity_val}",
+                        src: "{selected}",
+                        onload: move |_| {
+                            *opacity_val.write() = 100;
                         }
                     }
                 }
@@ -84,17 +78,11 @@ fn App() -> Element {
                 br {}
                 div { class: "flex space-x-4",
                     for asset in v {
-                        picture {
-                            source {
-                                r#type: "image/avif",
-                                dangerous_inner_html: "srcset=\"{asset}\""
-                            }
-                            img {
-                                src: "{asset}",
-                                class: "w-32 h-32 border-2 border-blue-200 rounded-full object-cover",
-                                onclick: move |_| {
-                                    *selected.write() = asset.clone();
-                                }
+                        img {
+                            src: "{asset}",
+                            class: "w-32 h-32 border-2 border-blue-200 rounded-full object-cover",
+                            onclick: move |_| {
+                                *selected.write() = asset.clone();
                             }
                         }
                     }
