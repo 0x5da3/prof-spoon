@@ -90,7 +90,7 @@ fn App() -> Element {
                     for asset in v {
                         img {
                             src: "{asset}",
-                            class: "w-32 h-32 border-2 border-blue-200 rounded-full object-cover",
+                            class: "w-32 h-32 border-2 border-blue-200 rounded-full object-cover overflow-clip",
                             onclick: move |_| {
                                 *selected.write() = asset.clone();
                             }
