@@ -13,19 +13,32 @@ fn main() {
     launch(App);
 }
 
+pub const ASSET1: &str = manganis::mg!(file(
+    "https://github.com/0x5da3/prof-spoon/blob/main/docs/assets/static/1.PNG"
+));
+pub const ASSET2: &str = manganis::mg!(file(
+    "https://github.com/0x5da3/prof-spoon/blob/main/docs/assets/static/2.PNG"
+));
+pub const ASSET3: &str = manganis::mg!(file(
+    "https://github.com/0x5da3/prof-spoon/blob/main/docs/assets/static/3.PNG"
+));
+pub const ASSET4: &str = manganis::mg!(file(
+    "https://github.com/0x5da3/prof-spoon/blob/main/docs/assets/static/4.PNG"
+));
+
 // pub const ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG").preload());
 // pub const ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG").preload());
 // pub const ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG").preload());
 // pub const ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG").preload());
 
-pub const ASSET1: &str =
-    "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/1PNG5cfdcad44d303f1e.avif";
-pub const ASSET2: &str =
-    "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/2PNGa46786e431bc964c.avif";
-pub const ASSET3: &str =
-    "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/3PNGe9db826187321857.avif";
-pub const ASSET4: &str =
-    "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/4PNGb07e403040713d48.avif";
+// pub const ASSET1: &str =
+//     "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/1PNG5cfdcad44d303f1e.avif";
+// pub const ASSET2: &str =
+//     "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/2PNGa46786e431bc964c.avif";
+// pub const ASSET3: &str =
+//     "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/3PNGe9db826187321857.avif";
+// pub const ASSET4: &str =
+//     "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/4PNGb07e403040713d48.avif";
 
 #[component]
 fn App() -> Element {
