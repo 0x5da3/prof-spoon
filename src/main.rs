@@ -57,9 +57,7 @@ fn App() -> Element {
 
     let v = vec![ASSET1, ASSET2, ASSET3, ASSET4];
     let mut opacity_val = use_signal(|| 0);
-    let mut selected = use_signal(|| {
-        "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/1PNG5cfdcad44d303f1e.avif"
-    });
+    let mut selected = use_signal(|| ASSET1);
 
     //a { href: "https://web.iriam.app/s/user/YVR6XsPvqN?uuid=47b0488e", "イリアム" }
     rsx! {
@@ -86,11 +84,11 @@ fn App() -> Element {
                     r#async: true
                 }
                 br {}
-                div { class: "flex space-x-4",
+                div { class: "flex space-x-4  overflow-clip",
                     for asset in v {
                         img {
                             src: "{asset}",
-                            class: "w-32 h-32 border-2 border-blue-200 rounded-full object-cover overflow-clip",
+                            class: "w-32 h-32 border-2 border-blue-200 rounded-full object-cover",
                             onclick: move |_| {
                                 *selected.write() = asset.clone();
                             }
