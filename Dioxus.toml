@@ -8,15 +8,13 @@ name = "prof-spoon"
 default_platform = "web"
 
 # `build` & `serve` dist path
-#out_dir = "dist"
-out_dir = "docs"
+out_dir = "dist"
 
 # resource (assets) file folder
 asset_dir = "assets"
 
 [web.app]
 
-base_path = "prof-spoon"
 
 # HTML title tag content
 title = "prof-spoon"
@@ -27,7 +25,7 @@ title = "prof-spoon"
 reload_html = true
 
 # which files or dirs will be watcher monitoring
-watch_path = ["src", "assets"]
+watch_path = ["src", "assets", "public"]
 
 # include `assets` in web platform
 [web.resource]

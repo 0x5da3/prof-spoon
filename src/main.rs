@@ -26,9 +26,8 @@ fn App() -> Element {
     let _reload = 23;
 
     rsx! {
-        link {
-            rel: "stylesheet",
-            href: "https://github.com/0x5da3/prof-spoon/blob/main/docs/prof-spoon/tailwindcss7115efdd5e257c6f.css"
+        head {
+            meta { charset: "UTF-8" }
         }
         script { src: "https://cdn.tailwindcss.com" }
         div { class: "bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex justify-center items-center",
@@ -61,14 +60,14 @@ fn App() -> Element {
                 div { class: "flex justify-center space-x-4 ",
                     div {
                         a {
-                            class: "bg-[#6777FF] text-white font-bold py-1 px-4 rounded-full hover:bg-blue-700 transition duration-300",
+                            class: "bg-blue-500 text-white font-bold py-1 px-4 rounded-full hover:bg-blue-700 transition duration-300",
                             href: "https://web.iriam.app/s/user/YVR6XsPvqN?uuid=47b0488e",
                             "IRIAM"
                         }
                     }
                     div {
                         a {
-                            class: "bg-[#000000] text-white font-bold py-1 px-4 rounded-full hover:bg-gray-700 transition duration-300",
+                            class: "bg-black text-white font-bold py-1 px-4 rounded-full hover:bg-gray-700 transition duration-300",
                             href: "https://x.com/spoo_nE",
                             "X"
                         }
