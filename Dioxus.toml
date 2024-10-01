@@ -34,7 +34,7 @@ watch_path = ["src", "assets", "public"]
 
 # CSS style file
 
-style = ["/tailwind.css"]
+style = ["/tailwind.css","https://cdn.tailwindcss.com"]
 
 # Javascript code file
 script = []
