@@ -28,8 +28,8 @@ fn App() -> Element {
     rsx! {
         head {
             meta { charset: "UTF-8" }
+            link { rel: "stylesheet", href: "https://cdn.tailwindcss.com" }
         }
-        script { src: "https://cdn.tailwindcss.com" }
         div { class: "bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex justify-center items-center",
             div { class: "w-full max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6 space-y-6",
                 h1 { class: "text-3xl text-center bg-gradient-to-r from-gray-900 via-gray-700 to-black py-6 rounded-lg text-gray-200 font-serif tracking-wide",
