@@ -37,10 +37,13 @@ watch_path = ["src", "assets", "public"]
 style = ["https://cdn.tailwindcss.com"]
 
 # Javascript code file
-script = []
+script = ["https://cdn.tailwindcss.com"]
 
 [web.resource.dev]
 
 # Javascript code file
 # serve: [dev-server] only
-script = []
+style = ["https://cdn.tailwindcss.com"]
+
+# Javascript code file
+script = ["https://cdn.tailwindcss.com"]

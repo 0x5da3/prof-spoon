@@ -12,10 +12,10 @@ fn main() {
     launch(App);
 }
 
-pub const ASSET1: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/dev/docs/prof-spoon/1PNGecfdf4cb43aec65.avif";
-pub const ASSET2: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/main/docs/prof-spoon/2PNGa46786e431bc964c.avif";
-pub const ASSET3: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/main/docs/prof-spoon/3PNGe9db826187321857.avif";
-pub const ASSET4: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/main/docs/prof-spoon/4PNGb07e403040713d48.avif";
+pub const ASSET1: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/dev/docs/prof-spoon/1PNG5cfdcad44d303f1e.avif";
+pub const ASSET2: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/dev/docs/prof-spoon/2PNGa46786e431bc964c.avif";
+pub const ASSET3: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/dev/docs/prof-spoon/3PNG7cb75641233a4727.avif";
+pub const ASSET4: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/dev/docs/prof-spoon/4PNG8cccaf384fc420b9.avif";
 
 pub const _ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG"));
 pub const _ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG"));
