@@ -17,6 +17,11 @@ pub const ASSET2: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/re
 pub const ASSET3: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/main/docs/prof-spoon/3PNGe9db826187321857.avif";
 pub const ASSET4: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/main/docs/prof-spoon/4PNGb07e403040713d48.avif";
 
+pub const _ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG").preload());
+pub const _ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG").preload());
+pub const _ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG").preload());
+pub const _ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG").preload());
+
 #[component]
 fn App() -> Element {
     let v = vec![ASSET1, ASSET2, ASSET3, ASSET4];
@@ -26,10 +31,6 @@ fn App() -> Element {
     let _reload = 23;
 
     rsx! {
-        head {
-            meta { charset: "UTF-8" }
-            link { rel: "stylesheet", href: "https://cdn.tailwindcss.com" }
-        }
         div { class: "bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex justify-center items-center",
             div { class: "w-full max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6 space-y-6",
                 h1 { class: "text-3xl text-center bg-gradient-to-r from-gray-900 via-gray-700 to-black py-6 rounded-lg text-gray-200 font-serif tracking-wide",
