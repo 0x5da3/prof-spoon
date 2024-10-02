@@ -4,7 +4,7 @@ use dioxus::prelude::*;
 use dioxus_logger::tracing::{info, Level};
 
 // Urls are relative to your Cargo.toml file
-pub const _TAILWIND_URL: &str = manganis::mg!(file("public/tailwind.css"));
+//pub const _TAILWIND_URL: &str = manganis::mg!(file("public/tailwind.css"));
 
 fn main() {
     dioxus_logger::init(Level::INFO).expect("failed to init logger");
@@ -12,15 +12,15 @@ fn main() {
     launch(App);
 }
 
-pub const ASSET1: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/main/docs/prof-spoon/1PNG5cfdcad44d303f1e.avif";
+pub const ASSET1: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/dev/docs/prof-spoon/1PNGecfdf4cb43aec65.avif";
 pub const ASSET2: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/main/docs/prof-spoon/2PNGa46786e431bc964c.avif";
 pub const ASSET3: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/main/docs/prof-spoon/3PNGe9db826187321857.avif";
 pub const ASSET4: &str = "https://raw.githubusercontent.com/0x5da3/prof-spoon/refs/heads/main/docs/prof-spoon/4PNGb07e403040713d48.avif";
 
-pub const _ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG").preload());
-pub const _ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG").preload());
-pub const _ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG").preload());
-pub const _ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG").preload());
+pub const _ASSET1: manganis::ImageAsset = manganis::mg!(image("./public/static/1.PNG"));
+pub const _ASSET2: manganis::ImageAsset = manganis::mg!(image("./public/static/2.PNG"));
+pub const _ASSET3: manganis::ImageAsset = manganis::mg!(image("./public/static/3.PNG"));
+pub const _ASSET4: manganis::ImageAsset = manganis::mg!(image("./public/static/4.PNG"));
 
 #[component]
 fn App() -> Element {
