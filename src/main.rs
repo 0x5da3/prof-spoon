@@ -28,17 +28,16 @@ fn App() -> Element {
     let mut opacity_val = use_signal(|| 0);
     let mut selected = use_signal(|| ASSET1);
 
-    let _reload = 58;
-
+    let _reload = 16;
     rsx! {
         div { class: "bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex justify-center items-center",
-            div { class: "w-full max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6 space-y-6",
+            div { class: "w-full max-w-2xl mx-auto bg-gradient-to-b from-rose-50 from-5% via-white via-50% to-white to-95% rounded-lg shadow-lg p-6 space-y-6",
                 h1 { class: "text-3xl text-center bg-gradient-to-r from-gray-900 via-gray-700 to-black py-6 rounded-lg text-gray-200 font-serif tracking-wide",
                     "🥄鉄乃 匙"
                 }
-                div { class: "w-full flex justify-center bg-white",
+                div { class: "w-full flex justify-center ",
                     img {
-                        class: "w-96 h-96  object-cover rounded-2xl border-2 border-pink-200 shadow-md transition ease-in-out duration-150 cursor-not-allowed ring-1 ring-slate-900/10",
+                        class: "bg-white w-96 h-96  object-cover rounded-2xl border-2 border-pink-200 shadow-md transition ease-in-out duration-150 cursor-not-allowed ring-1 ring-slate-900/10",
                         src: "{selected}",
                         onload: move |_| {
                             *opacity_val.write() = 100;
