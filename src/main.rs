@@ -28,7 +28,7 @@ fn App() -> Element {
     let mut opacity_val = use_signal(|| 0);
     let mut selected = use_signal(|| ASSET1);
 
-    let _reload = 23;
+    let _reload = 30;
 
     rsx! {
         div { class: "bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex justify-center items-center",
@@ -70,9 +70,26 @@ fn App() -> Element {
                         a {
                             class: "bg-black text-white font-bold py-1 px-4 rounded-full hover:bg-gray-700 transition duration-300",
                             href: "https://x.com/spoo_nE",
-                            "X"
+                            "X (📻)"
                         }
                     }
+                    div {
+                        a {
+                            class: "bg-black text-white font-bold py-1 px-4 rounded-full hover:bg-gray-700 transition duration-300",
+                            href: "https://x.com/ev_1s",
+                            "X (🖊)"
+                        }
+                    }
+                    div {
+                        a {
+                            class: "bg-indigo-600 text-white font-bold py-1 px-4 rounded-full hover:bg-gray-700 transition duration-300",
+                            href: "https://x.com/ev_1s",
+                            "Discord"
+                        }
+                    }
+                }
+                footer { class: "bg-gray-800 text-white py-6 text-center",
+                    p { "© 鉄乃 匙 All Rights Reserved." }
                 }
             }
         }
