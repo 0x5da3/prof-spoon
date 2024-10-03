@@ -28,17 +28,17 @@ fn App() -> Element {
     let mut opacity_val = use_signal(|| 0);
     let mut selected = use_signal(|| ASSET1);
 
-    let _reload = 30;
+    let _reload = 58;
 
     rsx! {
         div { class: "bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex justify-center items-center",
             div { class: "w-full max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6 space-y-6",
                 h1 { class: "text-3xl text-center bg-gradient-to-r from-gray-900 via-gray-700 to-black py-6 rounded-lg text-gray-200 font-serif tracking-wide",
-                    "鉄乃 匙"
+                    "🥄鉄乃 匙"
                 }
                 div { class: "w-full flex justify-center bg-white",
                     img {
-                        class: "w-96 h-96  object-cover rounded-2xl border-2 border-pink-200 shadow-md",
+                        class: "w-96 h-96  object-cover rounded-2xl border-2 border-pink-200 shadow-md transition ease-in-out duration-150 cursor-not-allowed ring-1 ring-slate-900/10",
                         src: "{selected}",
                         onload: move |_| {
                             *opacity_val.write() = 100;
@@ -61,33 +61,35 @@ fn App() -> Element {
                 div { class: "flex justify-center space-x-4 ",
                     div {
                         a {
-                            class: "bg-blue-500 text-white font-bold py-1 px-4 rounded-full hover:bg-blue-700 transition duration-300",
+                            class: "bg-blue-500 shadow-blue-500/50 shadow-lg text-white font-bold py-1 px-4 rounded-full hover:bg-blue-700 transition duration-300",
                             href: "https://web.iriam.app/s/user/YVR6XsPvqN?uuid=47b0488e",
                             "IRIAM"
                         }
                     }
                     div {
                         a {
-                            class: "bg-black text-white font-bold py-1 px-4 rounded-full hover:bg-gray-700 transition duration-300",
+                            class: "bg-black shadow-black shadow-md text-white font-bold py-1 px-4 rounded-full hover:bg-gray-700 transition duration-300",
                             href: "https://x.com/spoo_nE",
                             "X (📻)"
                         }
                     }
                     div {
                         a {
-                            class: "bg-black text-white font-bold py-1 px-4 rounded-full hover:bg-gray-700 transition duration-300",
+                            class: "bg-black shadow-black shadow-md text-white font-bold py-1 px-4 rounded-full hover:bg-gray-700 transition duration-300",
                             href: "https://x.com/ev_1s",
                             "X (🖊)"
                         }
                     }
                     div {
                         a {
-                            class: "bg-indigo-600 text-white font-bold py-1 px-4 rounded-full hover:bg-gray-700 transition duration-300",
-                            href: "https://x.com/ev_1s",
+                            class: "bg-indigo-600 shadow-indigo-500/50 shadow-lg text-white font-bold py-1 px-4 rounded-full hover:bg-indigo-800 transition duration-300",
+                            href: "https://discord.gg/shwHJwbTG4",
                             "Discord"
                         }
                     }
                 }
+                br {}
+                br {}
                 footer { class: "bg-gray-800 text-white py-6 text-center",
                     p { "© 鉄乃 匙 All Rights Reserved." }
                 }
