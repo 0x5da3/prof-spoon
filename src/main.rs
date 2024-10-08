@@ -33,7 +33,7 @@ fn App() -> Element {
         div { class: "bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen flex justify-center items-center",
             div { class: "w-full max-w-2xl mx-auto bg-gradient-to-b from-rose-50 from-5% via-white via-50% to-white to-95% rounded-lg shadow-lg p-6 space-y-6",
                 h1 { class: "text-3xl text-center bg-gradient-to-r from-gray-900 via-gray-700 to-black py-6 rounded-lg text-gray-200 font-serif tracking-wide",
-                    "🥄鉄乃 匙"
+                    "🥄銀乃 匙"
                 }
                 div { class: "w-full flex justify-center ",
                     img {
@@ -90,7 +90,7 @@ fn App() -> Element {
                 br {}
                 br {}
                 footer { class: "bg-gray-800 text-white py-6 text-center",
-                    p { "© 鉄乃 匙 All Rights Reserved." }
+                    p { "© 銀乃 匙 All Rights Reserved." }
                 }
             }
         }
